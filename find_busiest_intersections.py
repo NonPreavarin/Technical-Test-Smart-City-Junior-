@@ -18,4 +18,8 @@ def find_busiest_intersections(traffic_data):
     max_vehicles = max(traffic_data.values())
     busiest_intersections = [intersection for intersection, vehicles in traffic_data.items() if vehicles == max_vehicles]
 
+    print(f"Intersections with the highest number of vehicles ({max_vehicles}):")
+    for intersection in busiest_intersections:
+        print(intersection)
+
     return busiest_intersections
